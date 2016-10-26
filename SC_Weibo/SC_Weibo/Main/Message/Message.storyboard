@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bZb-ro-nrk">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="uUU-R6-hNi">
+            <objects>
+                <navigationController id="bZb-ro-nrk" customClass="BaseNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F9k-tf-M6L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tKc-lg-k1p" kind="relationship" relationship="rootViewController" id="CfR-zo-Ebu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbv-8x-3Rd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-238" y="342"/>
+        </scene>
+        <!--信息-->
+        <scene sceneID="SbJ-UC-jaU">
+            <objects>
+                <viewController id="tKc-lg-k1p" customClass="MessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R6E-pX-yWz"/>
+                        <viewControllerLayoutGuide type="bottom" id="7sa-5B-HAd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O3J-Kq-6iX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhv-MX-JyQ">
+                                <rect key="frame" x="59" y="131" width="51" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cat"/>
+                                <connections>
+                                    <action selector="catAction:" destination="tKc-lg-k1p" eventType="touchUpInside" id="4Yy-xA-lAl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rux-Gi-oIb">
+                                <rect key="frame" x="144" y="131" width="69" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="BlueMoon"/>
+                                <connections>
+                                    <action selector="blueMoonAction:" destination="tKc-lg-k1p" eventType="touchUpInside" id="rgq-JU-Ti5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="信息" id="ojc-gJ-127"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BFV-Ja-n0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="342"/>
+        </scene>
+    </scenes>
+</document>

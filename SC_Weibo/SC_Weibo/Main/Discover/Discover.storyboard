@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2Gk-kB-feL">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="IIl-6z-hQU">
+            <objects>
+                <navigationController id="2Gk-kB-feL" customClass="BaseNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sCZ-QT-Z7W">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="e7w-vt-hRE" kind="relationship" relationship="rootViewController" id="j1L-zh-S3z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w7f-ct-jB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-243.73333333333332" y="339.85333333333335"/>
+        </scene>
+        <!--发现-->
+        <scene sceneID="AIh-cM-YD7">
+            <objects>
+                <viewController id="e7w-vt-hRE" customClass="DiscoverViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oJz-Fn-3vj"/>
+                        <viewControllerLayoutGuide type="bottom" id="F1t-hY-iSh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fbA-rU-3gy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJI-6W-h40">
+                                <rect key="frame" x="20" y="72" width="80" height="80"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="0dH-aL-DdD"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="附近的人.jpg"/>
+                                <connections>
+                                    <action selector="nearbyUser:" destination="e7w-vt-hRE" eventType="touchUpInside" id="ZPb-5B-tDd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVM-We-r4D">
+                                <rect key="frame" x="129" y="72" width="80" height="80"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="附近微博.jpg"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F1t-hY-iSh" firstAttribute="top" secondItem="MJI-6W-h40" secondAttribute="bottom" constant="416" id="1o9-Ax-NEF"/>
+                            <constraint firstItem="MJI-6W-h40" firstAttribute="leading" secondItem="fbA-rU-3gy" secondAttribute="leadingMargin" constant="4" id="CPQ-6o-J72"/>
+                            <constraint firstItem="TVM-We-r4D" firstAttribute="leading" secondItem="MJI-6W-h40" secondAttribute="trailing" constant="29" id="Xtj-MJ-Q1F"/>
+                            <constraint firstItem="MJI-6W-h40" firstAttribute="firstBaseline" secondItem="TVM-We-r4D" secondAttribute="firstBaseline" id="ZPO-fY-JUD"/>
+                            <constraint firstItem="TVM-We-r4D" firstAttribute="baseline" secondItem="MJI-6W-h40" secondAttribute="baseline" id="agH-uq-xbh"/>
+                            <constraint firstItem="MJI-6W-h40" firstAttribute="bottom" secondItem="TVM-We-r4D" secondAttribute="bottom" id="eyC-qq-DgW"/>
+                            <constraint firstItem="MJI-6W-h40" firstAttribute="top" secondItem="oJz-Fn-3vj" secondAttribute="bottom" constant="8" symbolic="YES" id="rsq-UQ-kSS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TVM-We-r4D" secondAttribute="trailing" constant="95" id="vDl-zM-zfD"/>
+                            <constraint firstItem="TVM-We-r4D" firstAttribute="top" secondItem="MJI-6W-h40" secondAttribute="top" id="zYy-Ed-LWf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="发现" id="Dzu-7P-ptM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zn4-M9-KWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="357" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="附近微博.jpg" width="184" height="184"/>
+        <image name="附近的人.jpg" width="184" height="184"/>
+    </resources>
+</document>
